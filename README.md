@@ -22,7 +22,7 @@ Our aim is to create a tool that has the ability to identify exclusionary words 
  
 •	We wish to analyze the text written in Regional languages like Hindi, Marathi, Kannada and suggest alternate inclusive language terms.
 
-## 👉🏻Frameworks and packages we will use
+## 👉🏻 Frameworks and packages we will use
 •	Spacy and textacy libraries of python for NLP.
 
 •	SpeechRecognition, PyTesseract, and EasyOCR Libraries.
@@ -32,3 +32,4 @@ Our aim is to create a tool that has the ability to identify exclusionary words 
 •	Django and Flask.
 
 ## 📝 Some examples
+
