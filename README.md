@@ -4,7 +4,9 @@ Check for Inclusiveness in documents
  
 # Text and speech analysis for Inclusivity 
 
-A brief description of what this project does and who it's for
+## 🤩 Motivation
+Language has the power to make or break a conversation, both verbal and written. It is very important to use the right set of words when we do so. Sometimes unintentionally we may use words that are offensive to a certain group of people. The way we talk or express ourselves can cause others to feel uncomfortable, misunderstood, or excluded. These exclusions can be with respect to gender, race, color, physical abilities, ethnicity, religion, caste, job roles, and so on.
+
 
 ## 👉🏻 Solution
 Hence Inclusive language plays an important role here. Inclusive language simply means a language that is inclusive to each and everyone in the society regardless of their culture, race, gender, economic background, sexual orientation.
