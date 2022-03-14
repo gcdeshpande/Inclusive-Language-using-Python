@@ -32,4 +32,5 @@ Our aim is to create a tool that has the ability to identify exclusionary words 
 •	Django and Flask.
 
 ## 📝 Some examples
+![Picture 1](https://user-images.githubusercontent.com/67697564/158129069-e69db2fb-7e05-457d-b1cd-63cde4d1d9d5.jpg)
 
