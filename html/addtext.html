@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Inclusivity - Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../static/css/styles.css" rel="stylesheet">
+    <style>
+        /* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn {
+    background-color: rgb(165, 52, 199);
+    color: white
+    
+}
+
+/* .button{
+    background-color: rgb(20, 6, 32);
+    color: #fff;
+} */
+
+.bg-primary{
+    background-color: black;
+}
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#E9D5DA;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(165, 52, 199)1;
+}
+/* div {
+  background-color:  #E9D5DA;
+} */
+
+    </style>
+</head>
+
+<body style="background-color: #E9D5DA;">
+        <!-- Content Start -->
+        <!-- <div class="content"> -->
+            <!-- Navbar Start -->
+            <!-- <div class="container-fluid pt-4 px-4"> -->
+               
+            <!-- <nav class="navbar navbar-expand bg-light navbar-light sticky-top py-0" style="background-color: #E9D5DA; color: #E9D5DA;">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <!-- <div class="d-none d-md-flex ms-4">
+                    <a style="padding:20px; font-weight: bold; background-color: #E9D5DA; color: black; font-size: x-large;" >Inclusivity</a> -->
+                <!-- <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search">
+                </form> -->
+                  <!-- <div class="navbar-nav align-items-right ms-auto" style="background-color: #E9D5DA;">
+                    <a style="font-weight: 500; padding-left:1240px; padding-top: 28px !important; color: rgb(165, 52, 199);"  href="/logout">Log Out</a>
+                </div>         
+            </nav> --> 
+            <!-- Navbar End  -->
+
+            <div style="padding-top: 5px;">
+                <ul>
+                    <li><a class="active" href="#home" style="font-size:xx-large; font-weight: 800; color: #111; padding-left: 25px;">Inclusivity</a></li>
+                    <div class="navbar-nav align-items-right ms-auto" style="background-color: #E9D5DA;">
+                    <li style="float:right"> <a style="font-weight: 500; padding-left:965px; padding-top: 28px !important; color: rgb(165, 52, 199);" href="/logout">Log Out</a></li>
+                    </div>
+                  </ul>
+            </div>
+
+          
+
+            <div class="container-fluid pt-4 px-4" style="background-color:  #E9D5DA;">
+                <div class="row g-4" style="background-color:  #E9D5DA;">   
+                    <div class="col-sm-12 col-xl-6" style="background-color:  #E9D5DA;">
+                        <div class="bg-white rounded h-100 p-4" style="background-color:  #E9D5DA;">
+                            <h5 class="mb-4">Enter Text</h5>
+                            <form action="{{ url_for('textdata')}}" method="post">
+                                <div class="form-floating">
+                                    <textarea class="form-control" name="textdata" placeholder="Leave a comment here"
+                                        id="floatingTextarea" style="height: 150px;"></textarea>
+                                    <label for="floatingTextarea">Enter your text</label>
+                                </div>
+                                <div class="mb-1 form-check">
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn">Search & Replace</button>
+                                    <!-- btn btn-primary -->
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                    <!-- <hr> -->
+                    <!-- <div> -->
+                        <div class="col-sm-12 col-xl-6" style="background-color:#E9D5DA;">
+                            <div class="bg-white rounded h-100 p-4" style="background-color:  #E9D5DA;">
+                                <h5 class="mb-4">Upload your text file</h5>
+                                <form method="post" action="{{ url_for('filedata')}}" enctype="multipart/form-data">
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" name="option" id="floatingSelect"
+                                            aria-label="Floating label select example">
+                                            <option selected>Choose file type</option>
+                                            <option value="text">Text</option>
+                                            <option value="Image">Image</option>
+                                        </select>
+                                        <label for="floatingSelect">Select Filetype</label>
+                                    </div>
+                                    <div class="bg-white rounded h-100" style="background-color:  #E9D5DA;">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">Choose from file</label>
+                                            <input class="form-control" type="file" style="background-color: white;" name="filedata" accept="application/pdf application/img application/text" enctype=multipart/form-data id="formFile">
+                                        </div>
+                                    </div>
+                                    <div style="margin-right: 50px; margin-top: 108px; ">
+                                        <button type="submit" id="login" class="btn">Search & Replace</button>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    
+                </div>
+            </div>
+            <hr style="color: purple;">
+            <!-- Recent Sales Start -->
+            <!-- <div class="container"> -->
+            <div class="container-fluid py-4 pt-0 px-4">
+            <div class="col-12">
+                <div class="bg-white rounded h-100 p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h5 class="mb-2">Analyze results</h5>
+                        <!-- <a href="/addtext" type="button" class="btn btn-primary m-2"><i class="fa fa-home me-2"></i>Back to Home</a> -->
+                    </div>
+                    <div class="table-responsive">
+                                <table class="table text-start align-items-right table-bordered table-hover mb-0" style="color: black;">
+                            <thead>
+                                 <tr class="text-dark">
+                                        <th scope="col">Original Text</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                            </thead>
+                            {% for item in textdata %}
+                             <tbody>
+                             <tr>
+                                <td><pre>{{item['text']}}</pre></td>
+                                <td>
+                                    <a type="button" class="btn" href="{{ url_for('perdata', oid=item._id) }}">Result</a>
+                                    <!-- <a type="button" class="btn" href="{{ url_for('results', oid=item._id) }}">Results</a> -->
+                                </td>           
+                            </tr>
+                            </tbody>
+                            {% endfor %}
+                        </table>
+                        <!-- <table class="table text-start align-middle table-bordered table-hover mb-0">
+                            <thead>
+                                <tr class="text-dark">
+                                    <th scope="col">Original Text</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            {% for item in textdata %}
+                            <tbody>
+                                <tr>
+                                    <td><pre>{{item['text']}}</pre></td>
+                                    <td>
+                                    <a type="button" class="btn btn-primary" href="{{ url_for('perdata', oid=item._id) }}">Analyze</a>
+                                    <a type="button" class="btn btn-primary" href="{{ url_for('results', oid=item._id) }}">Results</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            {% endfor %}
+                        </table> -->
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Recent Sales End -->
+            </div>
+            
+
+        <!-- </div> -->
+        <!-- Content End -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/chart/chart.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/waypoints/waypoints.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+        </script>
+    <!-- Template Javascript -->
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
